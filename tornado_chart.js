@@ -16,7 +16,7 @@ looker.plugins.visualizations.add({
     },
     right_colour: {
       order: 3,
-      label: "Right Bars Colour",
+      label: "Right Bars Colour1212",
       type: "string",
       display: "color",
       default: "#3EB0D5"      
