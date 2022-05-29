@@ -16,7 +16,7 @@ looker.plugins.visualizations.add({
     },
     right_colour: {
       order: 3,
-      label: "Right Bars Colour1212",
+      label: "Right Bars Colour",
       type: "string",
       display: "color",
       default: "#3EB0D5"      
@@ -113,7 +113,7 @@ looker.plugins.visualizations.add({
         order: 2
       },
       right_colour: {
-        label: rightCategoryLabel + " Colour",
+        label: rightCategoryLabel + " Colour111",
         type: "string",
         display: "color",
         default: "#3EB0D5",
