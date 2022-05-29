@@ -23,7 +23,7 @@ looker.plugins.visualizations.add({
     right_size: {
       label: "Right Bars Size",
       type: "number",
-      display: "size",
+      display: "string",
       default: "14",
       order: 4
     },
