@@ -1,35 +1,32 @@
 looker.plugins.visualizations.add({
   options: {
     show_x_scale: {
-      order: 1,
       type: "boolean",
       label: "Show scale?",
-       display: "radio",
-      default: false      
+      default: false,
+      order: 1
     },
     left_colour: {
-      order: 2,
       label: "Left Bars Colour",
       type: "string",
       display: "color",
-      default: "#FBB555"
+      default: "#FBB555",
+      order: 2
     },
     right_colour: {
-      order: 3,
       label: "Right Bars Colour",
       type: "string",
       display: "color",
-      default: "#3EB0D5"      
+      default: "#3EB0D5",
+      order: 3
     },
-    right_size: {
-      order: 4,
+     right_size: {
       label: "Right Bars Size",
       type: "number",
       display: "number",
-      default: "14"
-      
+      default: "14",
+      order: 4
     },
-    
   },
 
   formatType: function (valueFormat) {
@@ -97,9 +94,33 @@ looker.plugins.visualizations.add({
     const leftCategoryLabel = pivots[0].data[pivotFieldRef]
     const rightCategoryLabel = pivots[1].data[pivotFieldRef]
 
+    const newOptions = {
+      show_x_scale: {
+        type: "boolean",
+        label: "Show scale?",
+        default: true,
+        order: 1
+      },
+      left_colour: {
+        label: leftCategoryLabel + " Colour",
+        type: "string",
+        display: "color",
+        default: "#FBB555",
+        order: 2
+      },
+      right_colour: {
+        label: rightCategoryLabel + " Colour",
+        type: "string",
+        display: "color",
+        default: "#3EB0D5",
+        order: 3
+      },
+    }
+
+    this.trigger('registerOptions', newOptions)
+
     const leftColour = config.left_colour
     const rightColour = config.right_colour
-    const rightSize = config.right_size
 
     const yDimension = queryResponse.fields.dimension_like[0].name
     const xMeasure = queryResponse.fields.measure_like[0].name
@@ -232,7 +253,7 @@ looker.plugins.visualizations.add({
       .attr("x", xRight(0) + centreShift)
       // .attr("y", y(shapedData[0].age) + y.bandwidth() / 2)
       .attr("y", 6)
-      .attr("font-size", d => rightSize)
+      .attr("font-size", 14)
       .attr("fill", d => rightColour)
       .attr("font-weight", 800)
       .text(rightCategoryLabel)
