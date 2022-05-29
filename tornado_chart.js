@@ -99,10 +99,11 @@ looker.plugins.visualizations.add({
 
     const newOptions = {
       show_x_scale: {
-        type: "boolean",
-        label: "Show scale?",
-        default: true,
-        order: 1
+      order: 1,
+      type: "boolean",
+      label: "Show scale?",
+       display: "radio",
+      default: false 
       },
       left_colour: {
         label: leftCategoryLabel + " Colour",
