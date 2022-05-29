@@ -1,24 +1,25 @@
 looker.plugins.visualizations.add({
   options: {
     show_x_scale: {
+      order: 1,
       type: "boolean",
       label: "Show scale?",
-      default: false,
-      order: 1
+       display: "radio",
+      default: false      
     },
     left_colour: {
+      order: 2,
       label: "Left Bars Colour",
       type: "string",
       display: "color",
-      default: "#FBB555",
-      order: 2
+      default: "#FBB555"
     },
     right_colour: {
+      order: 3,
       label: "Right Bars Colour",
       type: "string",
       display: "color",
-      default: "#3EB0D5",
-      order: 3
+      default: "#3EB0D5"      
     },
     right_size: {
       order: 4,
