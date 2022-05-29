@@ -21,22 +21,17 @@ looker.plugins.visualizations.add({
       order: 3
     },
     right_size: {
+      order: 4,
       label: "Right Bars Size",
       type: "number",
-      display: "string",
-      default: "14",
-      order: 4
+      display: "number",
+      default: "14"
+      
     },
-       font_size: {
-      type: "string",
-      label: "Font Size",
-      values: [
-        {"Large": "large"},
-        {"Small": "small"}
-      ],
-      display: "radio",
-      default: "large"
-    }
+
+    
+    
+    
   },
 
   formatType: function (valueFormat) {
