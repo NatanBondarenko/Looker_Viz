@@ -27,6 +27,16 @@ looker.plugins.visualizations.add({
       default: "14",
       order: 4
     },
+       font_size: {
+      type: "string",
+      label: "Font Size",
+      values: [
+        {"Large": "large"},
+        {"Small": "small"}
+      ],
+      display: "radio",
+      default: "large"
+    }
   },
 
   formatType: function (valueFormat) {
