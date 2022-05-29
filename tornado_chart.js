@@ -20,6 +20,13 @@ looker.plugins.visualizations.add({
       default: "#3EB0D5",
       order: 3
     },
+    right_size: {
+      label: "Right Bars Size",
+      type: "number",
+      display: "size",
+      default: "14",
+      order: 4
+    },
   },
 
   formatType: function (valueFormat) {
@@ -107,13 +114,21 @@ looker.plugins.visualizations.add({
         display: "color",
         default: "#3EB0D5",
         order: 3
-      },
+      }, 
+    right_size: {
+      label: "Right Bars Size",
+      type: "number",
+      display: "size",
+      default: "14",
+      order: 4
+    },
     }
 
     this.trigger('registerOptions', newOptions)
 
     const leftColour = config.left_colour
     const rightColour = config.right_colour
+    const rightSize = config.right_size
 
     const yDimension = queryResponse.fields.dimension_like[0].name
     const xMeasure = queryResponse.fields.measure_like[0].name
@@ -246,7 +261,7 @@ looker.plugins.visualizations.add({
       .attr("x", xRight(0) + centreShift)
       // .attr("y", y(shapedData[0].age) + y.bandwidth() / 2)
       .attr("y", 6)
-      .attr("font-size", 14)
+      .attr("font-size", s => rightSize)
       .attr("fill", d => rightColour)
       .attr("font-weight", 800)
       .text(rightCategoryLabel)
