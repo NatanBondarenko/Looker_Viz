@@ -97,39 +97,6 @@ looker.plugins.visualizations.add({
     const leftCategoryLabel = pivots[0].data[pivotFieldRef]
     const rightCategoryLabel = pivots[1].data[pivotFieldRef]
 
-    const newOptions = {
-      show_x_scale: {
-      order: 1,
-      type: "boolean",
-      label: "Show scale?",
-       display: "radio",
-      default: false 
-      },
-      left_colour: {
-        label: leftCategoryLabel + " Colour",
-        type: "string",
-        display: "color",
-        default: "#FBB555",
-        order: 2
-      },
-      right_colour: {
-        label: rightCategoryLabel + " Colour111",
-        type: "string",
-        display: "color",
-        default: "#3EB0D5",
-        order: 3
-      }, 
-    right_size: {
-      label: "Right Bars Size",
-      type: "number",
-      display: "size",
-      default: "14",
-      order: 4
-    },
-    }
-
-    this.trigger('registerOptions', newOptions)
-
     const leftColour = config.left_colour
     const rightColour = config.right_colour
     const rightSize = config.right_size
