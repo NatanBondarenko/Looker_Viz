@@ -271,7 +271,7 @@ looker.plugins.visualizations.add({
       .attr("x", xRight(0) + centreShift)
       // .attr("y", y(shapedData[0].age) + y.bandwidth() / 2)
       .attr("y", 6)
-      .attr("font-size", s => rightSize)
+      .attr("font-size", d => rightSize)
       .attr("fill", d => rightColour)
       .attr("font-weight", 800)
       .text(rightCategoryLabel)
