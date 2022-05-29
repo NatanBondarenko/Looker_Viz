@@ -109,7 +109,7 @@ looker.plugins.visualizations.add({
         order: 2
       },
       right_colour: {
-        label: rightCategoryLabel + " Colour",
+        label: rightCategoryLabel + " Colourrrrr",
         type: "string",
         display: "color",
         default: "#3EB0D5",
