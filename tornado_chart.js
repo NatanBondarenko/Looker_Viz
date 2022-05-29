@@ -28,9 +28,6 @@ looker.plugins.visualizations.add({
       default: "14"
       
     },
-
-    
-    
     
   },
 
