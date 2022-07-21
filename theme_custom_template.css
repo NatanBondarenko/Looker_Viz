@@ -47,7 +47,6 @@
 
 .reportTable {
   font-family: Open Sans,Helvetica,Arial,Noto Sans TC, Noto Sans SC,sans-serif;
-  color: #0a0c8a;
   border-collapse: collapse;
   border-spacing: 3px;
   table-layout: fixed;
@@ -126,7 +125,8 @@ th.headerCell {
   background-color: #e4d0bd;
 }
 
-.indexCell.transposed.calculation {
+.indexCell.transposed.calculation { 
+  color: #0a0c8a;
   background-color: #c9dfc5;
 }
 
