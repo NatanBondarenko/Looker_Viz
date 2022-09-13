@@ -17,13 +17,15 @@ const visObject = {
       display: "text",
       label: "02. Card Title",
       default: "Card Title"
-        point_color: {
-           type: "string",
-           display: "color",
-           label: "Point Color",
-           default: "#69b3a2"
-        }
-    },
+        },
+     stroke: {
+      section: "card_title",
+      type: "array",
+      label: "Stroke color",
+      display: "color",
+      default: ["#353b49"]
+    }
+ },
     card_subtitle: {
       type: "string",
       display: "text",
