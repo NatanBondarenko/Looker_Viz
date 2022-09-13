@@ -6,6 +6,16 @@
 
 const visObject = {
   options: {
+    font_size: {
+      type: "string",
+      label: "Font Size",
+      values: [
+        {"Large": "large"},
+        {"Small": "small"}
+      ],
+      display: "radio",
+      default: "large"
+    },
     image_html_url: {
       type: "string",
       display: "text",
@@ -18,14 +28,6 @@ const visObject = {
       label: "02. Card Title",
       default: "Card Title"
         },
-     stroke: {
-      section: "card_title",
-      type: "array",
-      label: "Stroke color",
-      display: "color",
-      default: ["#353b49"]
-    }
- },
     card_subtitle: {
       type: "string",
       display: "text",
