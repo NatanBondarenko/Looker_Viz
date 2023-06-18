@@ -11,7 +11,7 @@
 }
 
 .reportTable tr:nth-child(odd) {
-  background-color: black;
+  background-color: ebebeb;
   color: white;
 }
 
