@@ -11,7 +11,7 @@
 }
 
 .reportTable tr:nth-child(odd) {
-  background-color: #ebebeb;
+  background-color: #F0F1F1;
   color: white;
 }
 
@@ -76,7 +76,7 @@ th.headerCell {
 }
 
 .indexCell.transposed.measure tr:nth-child(odd) {
-  background-color: #ebebeb;
+  background-color: #F0F1F1;
   color: white;
 }
 
