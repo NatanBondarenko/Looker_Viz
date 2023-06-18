@@ -41,8 +41,17 @@ th.headerCell {
   border-left: 1px solid #d9dcde;
 }
 
-.headerCell.transposed.dimension {
+/* .headerCell.transposed.dimension {
   background-color: #FFFFFF;
+} */
+
+.headerCell.transposed.dimension tr:nth-child(even) {
+  background-color: white;
+}
+
+.headerCell.transposed.dimension tr:nth-child(odd) {
+  background-color: #ebebeb;
+  color: white;
 }
 
 .headerCell.transposed.dimension.merged {
