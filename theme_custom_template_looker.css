@@ -41,17 +41,8 @@ th.headerCell {
   border-left: 1px solid #d9dcde;
 }
 
-/* .headerCell.transposed.dimension {
+.headerCell.transposed.dimension {
   background-color: #FFFFFF;
-} */
-
-.headerCell.transposed.dimension tr:nth-child(even) {
-  background-color: white;
-}
-
-.headerCell.transposed.dimension tr:nth-child(odd) {
-  background-color: #ebebeb;
-  color: white;
 }
 
 .headerCell.transposed.dimension.merged {
@@ -76,8 +67,17 @@ th.headerCell {
   background-color: #e4ecf3;
 }
 
-.indexCell.transposed.measure {
+/* .indexCell.transposed.measure {
   background-color: #FFFFFF;
+} */
+
+.indexCell.transposed.measure tr:nth-child(even) {
+  background-color: white;
+}
+
+.indexCell.transposed.measure tr:nth-child(odd) {
+  background-color: #ebebeb;
+  color: white;
 }
 
 .indexCell.transposed.calculation {
