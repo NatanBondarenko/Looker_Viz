@@ -5,8 +5,6 @@
   border-spacing: 3px;
   table-layout: fixed;
   padding: 0 8px;
-  display: flex;
-  align-items:center;
 }
 
 .reportTable tr:nth-child(even) {
