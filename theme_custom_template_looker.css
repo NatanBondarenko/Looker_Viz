@@ -179,7 +179,7 @@ th.headerCell {
 
 .total.transposed {
   border-top: 0px !important;
-  background: #F0F1F1;
+/*   background: #F0F1F1; */
 }
 
 .rectElem.animated {
