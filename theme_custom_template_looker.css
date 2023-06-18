@@ -103,16 +103,16 @@ th.headerCell {
 .rowCell {
   vertical-align: super;
   padding-left: 5px;
-  border-left: 1px solid #BDC3C7; 
+  border-right: 1px solid #BDC3C7; 
 }
 
 .rowCell.merged {
   background-color: #ffffff !important;
 }
 
-.indexCell.transposed {
+/* .indexCell.transposed {
   font-weight: bold;
-}
+} */
 
 .indexCell.transposed.pivot {
   background-color: #ccd8e4;
