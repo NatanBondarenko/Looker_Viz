@@ -47,7 +47,7 @@
 
 .reportTable {
   font-family: Open Sans,Helvetica,Arial,Noto Sans TC, Noto Sans SC,sans-serif;
-  color: #0a0c8a;
+  color: #262d33;
   border-collapse: collapse;
   border-spacing: 3px;
   table-layout: fixed;
@@ -65,26 +65,26 @@ th.headerCell {
 }
 
 .headerCell.pivot {
-  background-color: #ccd8e4;
+  background-color: #FFFFFF;
   border-right: 1px solid #BDC3C7; 
 }
 
 .headerCell.measure {
-  background-color: #e4d0bd;
+  background-color: #FFFFFF;
   border-left: 1px solid #BDC3C7; 
 }
 
 .headerCell.measure.calculation {
-  background-color: #c9dfc5;
+  background-color: #FFFFFF;
   border-left: 1px solid #BDC3C7;
 }
 
 .headerCell.transposed.dimension {
-  background-color: #e4ecf3;
+  background-color: #FFFFFF;
 }
 
 .headerCell.transposed.dimension.merged {
-  background-color: #e4ecf3 !important;
+  background-color: #FFFFFF !important;
 }
 
 /* .headerCell.dimension.headerRow {
