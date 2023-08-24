@@ -42,7 +42,21 @@
 }
 
 .hover {
-  background-color: #ffffbb;
+      position: absolute;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    background-color: white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    font-family: sans-serif;
+    font-size: 12px;
+    z-index: 2;
 }
 
 .reportTable {
