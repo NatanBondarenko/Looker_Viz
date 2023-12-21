@@ -8,7 +8,7 @@ looker.plugins.visualizations.add({
         url: {
             type: "string",
             label: "Dashboard URL",
-            default: "https://your-looker-instance/dashboards/target_dashboard",
+            default: "https://pagayainvestments.looker.com/dashboards/4052",
         },
     },
     // Set up the initial state of the visualization
@@ -23,9 +23,12 @@ looker.plugins.visualizations.add({
         var dashboardName = config.name;
         var dashboardURL = config.url;
 
-        // Create a clickable link to the specified dashboard
+        // Extract filters from the current dashboard URL
+        var currentFilters = window.location.search;
+
+        // Create a clickable link to the specified dashboard with filters
         var link = document.createElement("a");
-        link.href = dashboardURL;
+        link.href = dashboardURL + currentFilters;
         link.target = "_blank"; // Open the link in a new tab
         link.textContent = dashboardName;
 
