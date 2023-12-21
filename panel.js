@@ -23,12 +23,18 @@ looker.plugins.visualizations.add({
         var dashboardName = config.name;
         var dashboardURL = config.url;
 
-        // Extract filters from the current dashboard URL
-        var currentFilters = window.location.search;
+        // Get the current URL
+        var currentUrl = window.location.href;
+
+        // Find the index of the "?" symbol in the URL
+        var questionMarkIndex = currentUrl.indexOf("?");
+
+        // Extract the query string
+        var queryString = questionMarkIndex !== -1 ? currentUrl.slice(questionMarkIndex) : "";
 
         // Create a clickable link to the specified dashboard with filters
         var link = document.createElement("a");
-        link.href = dashboardURL + currentFilters;
+        link.href = dashboardURL + queryString;
         link.target = "_blank"; // Open the link in a new tab
         link.textContent = dashboardName;
 
