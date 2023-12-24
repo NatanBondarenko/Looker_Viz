@@ -1,42 +1,33 @@
- looker.plugins.visualizations.add({
-      options: {
-        token: {
-          type: "string",
-          label: "Token",
-          default: "",
-        },
-        exposure: {
-          type: "string",
-          label: "Exposure Name",
-          default: "",
-        },
-        job_id: {
-          type: "string",
-          label: "Job ID",
-          default: "",
-        },
-        metadata_endpoint: {
-          type: "string",
-          label: "Metadata Endpoint",
-          default: "metadata.cloud.getdbt.com"
-        }
-      },
-      // Set up the initial state of the visualization
-      create: function (element, config) {
-        this._frame = element;
-      },
-      // Render in response to the data or settings changing
-      updateAsync: function (data, element, config, queryResponse, details, done) {
-        // Clear any errors from previous updates
-        this.clearErrors();
-    
-        var token = config.token;
-        var exposure_name = config.exposure;
-        var job_id = config.job_id;
-        var endpoint = config.metadata_endpoint
-    
-        var url = `https://${endpoint}/exposure-tile?token=${token}&name=${exposure_name}&jobId=${job_id}`;
-        this._frame.innerHTML = `<iframe style="border: 0" width="100%" height="100%" src=${url} title='Exposure Status Tile'></iframe>`;
-        done();
-      },
-    });
+looker.plugins.visualizations.add({
+  options: {},
+  // Set up the initial state of the visualization
+  create: function (element, config) {
+    // Add a button to trigger the display of the current URL
+    var button = document.createElement("button");
+    button.textContent = "Display Current URL";
+    button.onclick = this.displayCurrentURL.bind(this);
+    element.appendChild(button);
+
+    // Add a paragraph element to display the current URL
+    this.displayElement = document.createElement("p");
+    this.displayElement.textContent = "Current URL: ";
+    element.appendChild(this.displayElement);
+  },
+  // Render in response to the data or settings changing
+  updateAsync: function (data, element, config, queryResponse, details, done) {
+    // Clear any errors from previous updates
+    this.clearErrors();
+
+    // You can perform additional updates if needed
+
+    done();
+  },
+  // Function to display the current URL
+  displayCurrentURL: function () {
+    // Get the current URL from the browser's location object
+    var currentURL = window.location.href;
+
+    // Display the current URL on the page
+    this.displayElement.textContent = "Current URL: " + currentURL;
+  },
+});
