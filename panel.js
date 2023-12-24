@@ -1,33 +1,48 @@
 looker.plugins.visualizations.add({
-  options: {},
+  options: {
+    metricValue: {
+      type: "number",
+      label: "Metric Value",
+      default: 0,
+    },
+    metricLabel: {
+      type: "string",
+      label: "Metric Label",
+      default: "Custom Metric",
+    },
+    additionalInfo: {
+      type: "string",
+      label: "Additional Information",
+      default: "",
+    },
+  },
   // Set up the initial state of the visualization
   create: function (element, config) {
-    // Add a button to trigger the display of the current URL
-    var button = document.createElement("button");
-    button.textContent = "Display Current URL";
-    button.onclick = this.displayCurrentURL.bind(this);
-    element.appendChild(button);
-
-    // Add a paragraph element to display the current URL
-    this.displayElement = document.createElement("p");
-    this.displayElement.textContent = "Current URL: ";
-    element.appendChild(this.displayElement);
+    this._element = element;
+    this.updateContent(config);
   },
   // Render in response to the data or settings changing
   updateAsync: function (data, element, config, queryResponse, details, done) {
     // Clear any errors from previous updates
     this.clearErrors();
 
-    // You can perform additional updates if needed
+    // Update the content with the new configuration
+    this.updateContent(config);
 
     done();
   },
-  // Function to display the current URL
-  displayCurrentURL: function () {
-    // Get the current URL from the browser's location object
-    var currentURL = window.location.href;
+  // Function to update the content of the custom metric card
+  updateContent: function (config) {
+    // Create HTML content for the custom metric card
+    var htmlContent = `
+      <div style="padding: 20px; border: 1px solid #ccc; border-radius: 8px; text-align: center;">
+        <h3>${config.metricLabel}</h3>
+        <p style="font-size: 24px; font-weight: bold;">${config.metricValue}</p>
+        <p>${config.additionalInfo}</p>
+      </div>
+    `;
 
-    // Display the current URL on the page
-    this.displayElement.textContent = "Current URL: " + currentURL;
+    // Set the HTML content to the visualization element
+    this._element.innerHTML = htmlContent;
   },
 });
