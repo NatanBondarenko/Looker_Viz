@@ -17,30 +17,9 @@ looker.plugins.visualizations.add({
     // Access the uploaded PDF file
     const pdfFile = config.pdfFile;
 
-    // Perform PDF to Table extraction (using a hypothetical function extractTableFromPDF)
-    const tableData = extractTableFromPDF(pdfFile);
-
-    // Render the extracted table data in Looker's native Table visualization
-    LookerCharts.Utils.htmlForCell(element, '<div class="looker-table"></div>');
-    LookerCharts.Utils.htmlForCell(element.querySelector('.looker-table'), `
-      <table>
-        <thead>
-          <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <!-- Add more columns as needed -->
-          </tr>
-        </thead>
-        <tbody>
-          ${tableData.map(row => `
-            <tr>
-              <td>${row.column1}</td>
-              <td>${row.column2}</td>
-              <!-- Add more columns as needed -->
-            </tr>`).join('')}
-        </tbody>
-      </table>
-    `);
+    // Display a PDF.js viewer within Looker
+    const viewerHtml = `<iframe src="path/to/pdfjs/web/viewer.html?file=${pdfFile}" width="100%" height="600px"></iframe>`;
+    element.innerHTML = viewerHtml;
 
     done();
   },
