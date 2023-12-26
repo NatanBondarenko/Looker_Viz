@@ -1,51 +1,25 @@
-looker.plugins.visualizations.add({
-  options: {},
-  // Set up the initial state of the visualization
+
+Looker.plugins.visualizations.add({
   create: function (element, config) {
-    this._element = element;
-    this._createCollapsibleSections();
+    // Called when the visualization is first created
   },
-  // Render in response to the data or settings changing
   updateAsync: function (data, element, config, queryResponse, details, done) {
-    // Clear any errors from previous updates
-    this.clearErrors();
+    // Called when the data or config is changed
 
-    // You can perform additional updates if needed
+    // Get the URL from the config
+    const url = config.url;
 
-    done();
-  },
-  // Function to create collapsible sections
-  _createCollapsibleSections: function () {
-    var sections = [
-      { title: "Section 1", content: "Content for Section 1..." },
-      { title: "Section 2", content: "Content for Section 2..." },
-      // Add more sections as needed
-    ];
-
-    sections.forEach(function (section) {
-      var collapsibleSection = document.createElement("div");
-      collapsibleSection.className = "collapsible-section";
-
-      var button = document.createElement("button");
-      button.className = "collapsible-btn";
-      button.textContent = section.title;
-
-      var content = document.createElement("div");
-      content.className = "collapsible-content";
-      content.innerHTML = "<p>" + section.content + "</p>";
-
-      button.addEventListener("click", function () {
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
+    // Fetch HTML source code from the specified URL
+    fetch(url)
+      .then(response => response.text())
+      .then(html => {
+        // Display the HTML source code in the element
+        element.innerHTML = `<pre>${html}</pre>`;
+        done();
+      })
+      .catch(error => {
+        console.error('Fetch error:', error);
+        done();
       });
-
-      collapsibleSection.appendChild(button);
-      collapsibleSection.appendChild(content);
-
-      this._element.appendChild(collapsibleSection);
-    }, this);
-  },
+  }
 });
