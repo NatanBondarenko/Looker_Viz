@@ -20,6 +20,7 @@ th.headerCell {
   background-color: #FFFFFF;
   padding: 5px;
   border: 1px solid #d9dcde;
+  text-align: center;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -28,16 +29,19 @@ th.headerCell {
 .headerCell.dimension {
   background-color: #FFFFFF;
   border: 1px solid #d9dcde;
+  text-align: center;
 }
 
 .headerCell.pivot {
   background-color: #FFFFFF;
   border: 1px solid #d9dcde;
+  text-align: center;
 }
 
 .headerCell.measure {
   background-color: #FFFFFF;
   border: 1px solid #d9dcde;
+  text-align: center;
 }
 
 .headerCell.measure.calculation {
