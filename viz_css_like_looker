@@ -1,146 +1,146 @@
 .reportTable {
-      font-family: Roboto, 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans Arabic UI', 'Noto Sans Devanagari UI', 'Noto Sans Hebrew', 'Noto Sans Thai UI', 'Helvetica', 'Arial', sans-serif;
-      color: #262d33;
-      border-collapse: collapse;
-      border-spacing: 3px;
-      table-layout: fixed;
-      padding: 0 8px;
-    }
+  font-family: Roboto, 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans Arabic UI', 'Noto Sans Devanagari UI', 'Noto Sans Hebrew', 'Noto Sans Thai UI', 'Helvetica', 'Arial', sans-serif;
+  color: #262d33;
+  border-collapse: collapse;
+  border-spacing: 3px;
+  table-layout: fixed;
+  padding: 0 8px;
+}
 
-    .reportTable tr:nth-child(even) {
-      background-color: white;
-    }
+.reportTable tr:nth-child(even) {
+  background-color: white;
+}
 
-    .reportTable tr:nth-child(odd) {
-      background-color: #F0F1F1;
-      color: white;
-    }
+.reportTable tr:nth-child(odd) {
+  background-color: #F0F1F1;
+  color: white;
+}
 
-    th.headerCell {
-      background-color: #FFFFFF;
-      padding: 5px;
-      border-bottom: 1px solid #d9dcde;
-      position: sticky;
-      top: 0;
-      z-index: 1;
-    }
+th.headerCell {
+  background-color: #FFFFFF;
+  padding: 5px;
+  border-bottom: 1px solid #d9dcde;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 
-    .headerCell.dimension {
-      background-color: #FFFFFF;
-      border-right: 1px solid #d9dcde;
-    }
+.headerCell.dimension {
+  background-color: #FFFFFF;
+  border-right: 1px solid #d9dcde;
+}
 
-    .headerCell.pivot {
-      background-color: #FFFFFF;
-      border-right: 1px solid #d9dcde;
-    }
+.headerCell.pivot {
+  background-color: #FFFFFF;
+  border-right: 1px solid #d9dcde;
+}
 
-    .headerCell.measure {
-      background-color: #FFFFFF;
-      border-left: 1px solid #d9dcde;
-    }
+.headerCell.measure {
+  background-color: #FFFFFF;
+  border-left: 1px solid #d9dcde;
+}
 
-    .headerCell.measure.calculation {
-      background-color: #FFFFFF;
-      border-left: 1px solid #d9dcde;
-    }
+.headerCell.measure.calculation {
+  background-color: #FFFFFF;
+  border-left: 1px solid #d9dcde;
+}
 
-    .headerCell.transposed.dimension {
-      background-color: #FFFFFF;
-    }
+.headerCell.transposed.dimension {
+  background-color: #FFFFFF;
+}
 
-    .headerCell.transposed.dimension.merged {
-      background-color: #FFFFFF !important;
-    }
+.headerCell.transposed.dimension.merged {
+  background-color: #FFFFFF !important;
+}
 
-    .rowCell {
-      vertical-align: super;
-      padding-left: 5px;
-      border-right: 1px solid #BDC3C7;
-      line-height: 1.75;
-    }
+.rowCell {
+  vertical-align: super;
+  padding-left: 5px;
+  border-right: 1px solid #BDC3C7;
+  line-height: 1.75;
+}
 
-    .rowCell.merged {
-      background-color: #ffffff !important;
-    }
+.rowCell.merged {
+  background-color: #ffffff !important;
+}
 
-    .indexCell.transposed.pivot {
-      background-color: #ccd8e4;
-    }
+.indexCell.transposed.pivot {
+  background-color: #ccd8e4;
+}
 
-    .indexCell.transposed.dimension {
-      background-color: #e4ecf3;
-    }
+.indexCell.transposed.dimension {
+  background-color: #e4ecf3;
+}
 
-    /* .indexCell.transposed.measure {
-      background-color: #FFFFFF;
-    } */
+/* .indexCell.transposed.measure {
+  background-color: #FFFFFF;
+} */
 
-    .indexCell.transposed.measure tr:nth-child(even) {
-      background-color: white;
-    }
+.indexCell.transposed.measure tr:nth-child(even) {
+  background-color: white;
+}
 
-    .indexCell.transposed.measure tr:nth-child(odd) {
-      background-color: #F0F1F1;
-      color: white;
-    }
+.indexCell.transposed.measure tr:nth-child(odd) {
+  background-color: #F0F1F1;
+  color: white;
+}
 
-    .indexCell.transposed.calculation {
-      background-color: #c9dfc5;
-    }
+.indexCell.transposed.calculation {
+  background-color: #c9dfc5;
+}
 
-    .indexCell.transposed.pivot.merged {
-      background-color: #ccd8e4 !important;
-    }
+.indexCell.transposed.pivot.merged {
+  background-color: #ccd8e4 !important;
+}
 
-    .indexCell.transposed.dimension.merged {
-      background-color: #e4ecf3 !important;
-    }
+.indexCell.transposed.dimension.merged {
+  background-color: #e4ecf3 !important;
+}
 
-    .indexCell.transposed.measure.merged {
-      background-color: #e4d0bd !important;
-    }
+.indexCell.transposed.measure.merged {
+  background-color: #e4d0bd !important;
+}
 
-    .indexCell.transposed.calculation.merged {
-      background-color: #c9dfc5 !important;
-    }
+.indexCell.transposed.calculation.merged {
+  background-color: #c9dfc5 !important;
+}
 
-    .nonNumeric {
-      text-align: left;
-    }
+.nonNumeric {
+  text-align: left;
+}
 
-    .numeric {
-      text-align: right;
-    }
+.numeric {
+  text-align: right;
+}
 
-    .negative {
-      color: red;
-    }
+.negative {
+  color: red;
+}
 
-    .estimate {
-      color: darkgray !important;
-    }
+.estimate {
+  color: darkgray !important;
+}
 
-    .singleIndex {
-      padding-left: 15px !important;
-    }
+.singleIndex {
+  padding-left: 15px !important;
+}
 
-    .subtotal {
-      font-style: italic;
-      font-weight: bold;
-      background: #F0F1F1;
-    }
+.subtotal {
+  font-style: italic;
+  font-weight: bold;
+  background: #F0F1F1;
+}
 
-    .total {
-      border-top: 2px solid #bdc3c7 !important;
-      font-weight: bold !important;
-    }
+.total {
+  border-top: 2px solid #bdc3c7 !important;
+  font-weight: bold !important;
+}
 
-    .total.transposed {
-      border-top: 0px !important;
-    }
+.total.transposed {
+  border-top: 0px !important;
+}
 
-    .rectElem.animated {
-      font-family: Roboto;
-      margin: 4px;
-    }
+.rectElem.animated {
+  font-family: Roboto;
+  margin: 4px;
+}
