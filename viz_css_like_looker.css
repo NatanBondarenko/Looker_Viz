@@ -1,3 +1,5 @@
+
+element.style
 .reportTable {
   font-family: Roboto, 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans Arabic UI', 'Noto Sans Devanagari UI', 'Noto Sans Hebrew', 'Noto Sans Thai UI', 'Helvetica', 'Arial', sans-serif;
   color: #262d33;
@@ -20,7 +22,7 @@ th.headerCell {
   background-color: #FFFFFF;
   padding: 5px;
   border: 1px solid #d9dcde;
-  text-align: center;
+  text-align: center !important;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -29,35 +31,29 @@ th.headerCell {
 .headerCell.dimension {
   background-color: #FFFFFF;
   border: 1px solid #d9dcde;
-  text-align: center;
 }
 
 .headerCell.pivot {
   background-color: #FFFFFF;
   border: 1px solid #d9dcde;
-  text-align: center;
 }
 
 .headerCell.measure {
   background-color: #FFFFFF;
   border: 1px solid #d9dcde;
-  text-align: center;
 }
 
 .headerCell.measure.calculation {
   background-color: #FFFFFF;
   border: 1px solid #d9dcde;
-  text-align: center;
 }
 
 .headerCell.transposed.dimension {
   background-color: #FFFFFF;
-  text-align: center;
 }
 
 .headerCell.transposed.dimension.merged {
   background-color: #FFFFFF !important;
-  text-align: center;
 }
 
 .rowCell {
