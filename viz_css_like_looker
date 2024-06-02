@@ -13,7 +13,7 @@
 }
 
 .reportTable th {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   font-weight: bold;
   border-top: 1px solid #d9dcde;
   position: sticky;
@@ -29,15 +29,47 @@
   background-color: #f0f1f1;
 }
 
-.headerCell.dimension, .headerCell.pivot, .headerCell.measure, .headerCell.measure.calculation, .headerCell.transposed.dimension, .headerCell.transposed.dimension.merged {
-  background-color: #f9f9f9;
+th.headerCell {
+  background-color: #FFFFFF;
+  padding: 5px;
+  border-bottom: 1px solid #d9dcde;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.headerCell.dimension {
+  background-color: #FFFFFF;
   border-right: 1px solid #d9dcde;
 }
 
-.rowCell {
-  vertical-align: middle;
-  padding-left: 8px;
+.headerCell.pivot {
+  background-color: #FFFFFF;
   border-right: 1px solid #d9dcde;
+}
+
+.headerCell.measure {
+  background-color: #FFFFFF;
+  border-left: 1px solid #d9dcde;
+}
+
+.headerCell.measure.calculation {
+  background-color: #FFFFFF;
+  border-left: 1px solid #d9dcde;
+}
+
+.headerCell.transposed.dimension {
+  background-color: #FFFFFF;
+}
+
+.headerCell.transposed.dimension.merged {
+  background-color: #FFFFFF !important;
+}
+
+.rowCell {
+  vertical-align: super;
+  padding-left: 5px;
+  border-right: 1px solid #BDC3C7;
   line-height: 1.75;
 }
 
@@ -45,20 +77,45 @@
   background-color: #ffffff !important;
 }
 
-.indexCell.transposed.pivot, .indexCell.transposed.dimension, .indexCell.transposed.measure, .indexCell.transposed.calculation {
-  background-color: #f9f9f9;
+.indexCell.transposed.pivot {
+  background-color: #ccd8e4;
 }
+
+.indexCell.transposed.dimension {
+  background-color: #e4ecf3;
+}
+
+/* .indexCell.transposed.measure {
+  background-color: #FFFFFF;
+} */
 
 .indexCell.transposed.measure tr:nth-child(even) {
   background-color: white;
 }
 
 .indexCell.transposed.measure tr:nth-child(odd) {
-  background-color: #f0f1f1;
+  background-color: #F0F1F1;
+  color: white;
 }
 
-.indexCell.transposed.pivot.merged, .indexCell.transposed.dimension.merged, .indexCell.transposed.measure.merged, .indexCell.transposed.calculation.merged {
-  background-color: #f9f9f9 !important;
+.indexCell.transposed.calculation {
+  background-color: #c9dfc5;
+}
+
+.indexCell.transposed.pivot.merged {
+  background-color: #ccd8e4 !important;
+}
+
+.indexCell.transposed.dimension.merged {
+  background-color: #e4ecf3 !important;
+}
+
+.indexCell.transposed.measure.merged {
+  background-color: #e4d0bd !important;
+}
+
+.indexCell.transposed.calculation.merged {
+  background-color: #c9dfc5 !important;
 }
 
 .nonNumeric {
@@ -84,7 +141,7 @@
 .subtotal {
   font-style: italic;
   font-weight: bold;
-  background: #f0f1f1;
+  background: #F0F1F1;
 }
 
 .total {
