@@ -1,0 +1,102 @@
+.reportTable {
+  font-family: Roboto, 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans Arabic UI', 'Noto Sans Devanagari UI', 'Noto Sans Hebrew', 'Noto Sans Thai UI', 'Helvetica', 'Arial', sans-serif;
+  color: #262d33;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.reportTable th, .reportTable td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #d9dcde;
+}
+
+.reportTable th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  border-top: 1px solid #d9dcde;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.reportTable tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.reportTable tr:nth-child(odd) {
+  background-color: #f0f1f1;
+}
+
+.headerCell.dimension, .headerCell.pivot, .headerCell.measure, .headerCell.measure.calculation, .headerCell.transposed.dimension, .headerCell.transposed.dimension.merged {
+  background-color: #f9f9f9;
+  border-right: 1px solid #d9dcde;
+}
+
+.rowCell {
+  vertical-align: middle;
+  padding-left: 8px;
+  border-right: 1px solid #d9dcde;
+  line-height: 1.75;
+}
+
+.rowCell.merged {
+  background-color: #ffffff !important;
+}
+
+.indexCell.transposed.pivot, .indexCell.transposed.dimension, .indexCell.transposed.measure, .indexCell.transposed.calculation {
+  background-color: #f9f9f9;
+}
+
+.indexCell.transposed.measure tr:nth-child(even) {
+  background-color: white;
+}
+
+.indexCell.transposed.measure tr:nth-child(odd) {
+  background-color: #f0f1f1;
+}
+
+.indexCell.transposed.pivot.merged, .indexCell.transposed.dimension.merged, .indexCell.transposed.measure.merged, .indexCell.transposed.calculation.merged {
+  background-color: #f9f9f9 !important;
+}
+
+.nonNumeric {
+  text-align: left;
+}
+
+.numeric {
+  text-align: right;
+}
+
+.negative {
+  color: red;
+}
+
+.estimate {
+  color: darkgray !important;
+}
+
+.singleIndex {
+  padding-left: 15px !important;
+}
+
+.subtotal {
+  font-style: italic;
+  font-weight: bold;
+  background: #f0f1f1;
+}
+
+.total {
+  border-top: 2px solid #bdc3c7 !important;
+  font-weight: bold !important;
+}
+
+.total.transposed {
+  border-top: 0px !important;
+}
+
+.rectElem.animated {
+  font-family: Roboto;
+  margin: 4px;
+}
