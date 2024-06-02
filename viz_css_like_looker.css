@@ -7,11 +7,11 @@
   padding: 0 8px;
 }
 
-.reportTable tr:nth-child(even) {
+.reportTable tr:nth-child(odd) {
   background-color: white;
 }
 
-.reportTable tr:nth-child(odd) {
+.reportTable tr:nth-child(even) {
   background-color: #F0F1F1;
   color: white;
 }
