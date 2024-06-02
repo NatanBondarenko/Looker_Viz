@@ -22,7 +22,7 @@ th.headerCell {
   background-color: #FFFFFF;
   padding: 5px;
   border: 1px solid #d9dcde;
-  text-align: center;
+  text-align: center !important ;
   position: sticky;
   top: 0;
   z-index: 1;
