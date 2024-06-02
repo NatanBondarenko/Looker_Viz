@@ -47,14 +47,17 @@ th.headerCell {
 .headerCell.measure.calculation {
   background-color: #FFFFFF;
   border: 1px solid #d9dcde;
+  text-align: center;
 }
 
 .headerCell.transposed.dimension {
   background-color: #FFFFFF;
+  text-align: center;
 }
 
 .headerCell.transposed.dimension.merged {
   background-color: #FFFFFF !important;
+  text-align: center;
 }
 
 .rowCell {
