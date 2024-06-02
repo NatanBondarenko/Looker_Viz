@@ -20,6 +20,7 @@ th.headerCell {
   background-color: #FFFFFF;
   padding: 5px;
   border-bottom: 1px solid #d9dcde;
+  border-left: 1px solid #d9dcde;
   position: sticky;
   top: 0;
   z-index: 1;
