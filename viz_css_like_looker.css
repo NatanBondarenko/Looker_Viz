@@ -19,8 +19,7 @@
 th.headerCell {
   background-color: #FFFFFF;
   padding: 5px;
-  border-bottom: 1px solid #d9dcde;
-  border-left: 1px solid #d9dcde;
+  border: 1px solid #d9dcde;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -28,22 +27,22 @@ th.headerCell {
 
 .headerCell.dimension {
   background-color: #FFFFFF;
-  border-right: 1px solid #d9dcde;
+  border: 1px solid #d9dcde;
 }
 
 .headerCell.pivot {
   background-color: #FFFFFF;
-  border-right: 1px solid #d9dcde;
+  border: 1px solid #d9dcde;
 }
 
 .headerCell.measure {
   background-color: #FFFFFF;
-  border-left: 1px solid #d9dcde;
+  border: 1px solid #d9dcde;
 }
 
 .headerCell.measure.calculation {
   background-color: #FFFFFF;
-  border-left: 1px solid #d9dcde;
+  border: 1px solid #d9dcde;
 }
 
 .headerCell.transposed.dimension {
